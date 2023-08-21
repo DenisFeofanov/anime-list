@@ -10,19 +10,9 @@ import { HomeComponent } from './home/home.component';
 import { BrowseComponent } from './browse/browse.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    HomeComponent,
-    BrowseComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    GraphQLModule,
-    HttpClientModule
-  ],
+  declarations: [AppComponent, NavbarComponent, HomeComponent, BrowseComponent],
+  imports: [BrowserModule, AppRoutingModule, GraphQLModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
