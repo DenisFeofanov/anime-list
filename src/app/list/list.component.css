@@ -1,0 +1,19 @@
+.list-container {
+  padding: 3.25rem 4rem 10.12rem 3.94rem;
+  background: #fafafa;
+}
+
+.heading {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: Roboto-Medium;
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2rem; /* 114.286% */
+  margin: 0 0 4rem;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Anime } from '../list/list.model';
+import { Anime } from 'src/shared/anime.model';
 
 @Component({
   selector: 'app-list-item',
@@ -7,5 +7,5 @@ import { Anime } from '../list/list.model';
   styleUrls: ['./list-item.component.css'],
 })
 export class ListItemComponent {
-  @Input() item?: Anime;
+  @Input() item!: Anime;
 }

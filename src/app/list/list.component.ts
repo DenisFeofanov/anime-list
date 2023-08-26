@@ -1,6 +1,6 @@
 import { Apollo, gql } from 'apollo-angular';
 import { Component, OnInit } from '@angular/core';
-import { Anime } from './list.model';
+import { Anime } from 'src/shared/anime.model';
 
 @Component({
   selector: 'app-list',
@@ -18,12 +18,14 @@ export class ListComponent implements OnInit {
       .query({
         query: gql`
           query PopularAnime {
-            Page(page: 1, perPage: 10) {
-              media(type: ANIME, sort: POPULARITY) {
+            Page(page: 1, perPage: 5) {
+              media(type: ANIME, sort: POPULARITY_DESC) {
                 title {
                   romaji
                   native
                 }
+                genres
+                status
               }
             }
           }

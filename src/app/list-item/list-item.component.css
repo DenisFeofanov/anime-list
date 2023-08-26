@@ -1,0 +1,13 @@
+.list-item {
+  border-bottom: 1px solid #a5a5a5;
+  margin-bottom: 2.5;
+}
+
+.item-heading {
+  color: rgba(0, 0, 0, 0.87);
+  font-family: Roboto-Medium;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}

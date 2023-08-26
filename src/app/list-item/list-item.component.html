@@ -1,1 +1,5 @@
-<p *ngIf="item">{{ item.title.romaji }}</p>
+<div class="list-item">
+  <p class="item-heading">{{ item.title.romaji }}</p>
+  <p>Жанры: {{ item.genres }}</p>
+  <p>Статус: {{ item.status }}</p>
+</div>

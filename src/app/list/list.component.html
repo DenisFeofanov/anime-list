@@ -1,7 +1,12 @@
-<div *ngIf="error">Error :(</div>
+<div class="list-container">
+  <div class="list">
+    <div *ngIf="error">Error :(</div>
 
-<h1>Popular anime</h1>
+    <h1 class="heading">Popular anime</h1>
 
-<ul *ngFor="let anime of animeList">
-  <app-list-item [item]="anime"></app-list-item>
-</ul>
+    <ul *ngFor="let anime of animeList">
+      <app-list-item [item]="anime"></app-list-item>
+    </ul>
+  </div>
+  <div class="filters"></div>
+</div>
