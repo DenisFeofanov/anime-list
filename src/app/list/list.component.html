@@ -2,6 +2,6 @@
 
 <h1>Popular anime</h1>
 
-<ul *ngFor="let title of animeList">
-  <li>- {{ title.title.romaji }}</li>
+<ul *ngFor="let anime of animeList">
+  <app-list-item [item]="anime"></app-list-item>
 </ul>
