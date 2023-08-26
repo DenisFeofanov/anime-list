@@ -1,5 +1,24 @@
-<div class="list-item">
-  <p class="item-heading">{{ item.title.romaji }}</p>
-  <p>Жанры: {{ item.genres }}</p>
-  <p>Статус: {{ item.status }}</p>
+<div class="item">
+  <div class="heading-container">
+    <p class="heading">{{ item.title.romaji }}</p>
+    <img src="../../assets/forward-arrow.svg" />
+  </div>
+
+  <div class="properties">
+    <div class="first-column">
+      <div class="property">
+        <span>Статус:</span>
+        <span class="highlighted-text"> {{ item.status }}</span>
+      </div>
+    </div>
+
+    <div class="second-column">
+      <div class="property">
+        <span>Жанры:</span>
+        <span class="highlighted-text" *ngFor="let genre of item.genres">
+          {{ genre }}</span
+        >
+      </div>
+    </div>
+  </div>
 </div>
