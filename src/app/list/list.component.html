@@ -1,0 +1,7 @@
+<div *ngIf="error">Error :(</div>
+
+<h1>Popular anime</h1>
+
+<ul *ngFor="let title of animeList">
+  <li>- {{ title.title.romaji }}</li>
+</ul>
