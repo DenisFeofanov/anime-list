@@ -1,14 +1,6 @@
 import { Apollo, gql } from 'apollo-angular';
 import { Component, OnInit } from '@angular/core';
-
-interface Anime {
-  title: Title;
-}
-
-interface Title {
-  romaji: string;
-  native: string;
-}
+import { Anime } from './list.model';
 
 @Component({
   selector: 'app-list',
