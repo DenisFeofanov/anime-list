@@ -16,12 +16,21 @@
   color: var(--black);
   font-family: Roboto-Medium;
   font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
   margin: 0 1.19rem 0 0;
 }
 
 .properties {
   display: flex;
-  line-height: 1.5rem;
+
+  color: var(--black);
+  font-family: Roboto-Regular;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem; /* 150% */
 }
 
 .property span:first-child {
