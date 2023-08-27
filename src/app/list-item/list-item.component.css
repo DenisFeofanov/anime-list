@@ -12,7 +12,7 @@
 }
 
 .heading {
-  color: rgba(0, 0, 0, 0.87);
+  color: var(--black);
   font-family: Roboto-Medium;
   font-size: 1.25rem;
   margin: 0 1.19rem 0 0;
@@ -37,5 +37,5 @@
 }
 
 .highlighted-text {
-  color: #2962ff;
+  color: var(--highlighted);
 }

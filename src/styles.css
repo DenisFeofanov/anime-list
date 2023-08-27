@@ -1,6 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~normalize.css";
 
+:root {
+  --black: rgba(0, 0, 0, 0.87);
+  --highlighted: #2962ff;
+}
+
 @font-face {
   font-family: "Roboto-Medium";
   src: url("./assets/fonts/Roboto-Medium.ttf");
@@ -12,6 +17,6 @@
 }
 
 * {
-  color: rgba(0, 0, 0, 0.87);
+  color: var(--black);
   font-family: Roboto-Regular;
 }
