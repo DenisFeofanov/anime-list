@@ -9,6 +9,7 @@
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 1.81rem;
+  cursor: pointer;
 }
 
 .heading {
@@ -38,8 +39,4 @@
 
 .highlighted-text {
   color: var(--highlighted);
-}
-
-.button-to-PageCard {
-  cursor: pointer;
 }
