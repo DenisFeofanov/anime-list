@@ -10,6 +10,7 @@ import { Anime } from 'src/shared/anime.model';
 export class ListComponent implements OnInit {
   error: any;
   animeList!: Anime[];
+  currentPage = 3;
 
   constructor(private apollo: Apollo) {}
 

@@ -1,0 +1,20 @@
+.pagination {
+  display: flex;
+  margin-top: 3.25rem;
+  align-items: center;
+}
+
+.currentPage {
+  color: #000;
+  font-family: Roboto-Medium;
+  line-height: 2rem; /* 200% */
+  margin: 0 1.12rem;
+}
+
+.arrow {
+  cursor: pointer;
+}
+
+.arrow:hover .arrow-path {
+  fill: #347cff;
+}

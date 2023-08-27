@@ -39,3 +39,7 @@
 .highlighted-text {
   color: var(--highlighted);
 }
+
+.button-to-PageCard {
+  cursor: pointer;
+}
