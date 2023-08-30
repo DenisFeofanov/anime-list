@@ -13,14 +13,22 @@
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 
+  color: var(--black);
   font-family: Roboto-Regular;
   font-size: 1rem;
   font-style: normal;
   line-height: normal;
+
+  caret-color: var(--highlighted);
 }
 
-.search-input::placeholder {
+.search::placeholder {
   color: rgba(0, 0, 0, 0.4);
+}
+
+.search:focus {
+  outline: none;
+  border-bottom: 1px solid var(--highlighted);
 }
 
 .radio-heading {

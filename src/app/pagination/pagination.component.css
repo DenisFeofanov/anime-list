@@ -18,5 +18,5 @@
 }
 
 .arrow:hover .arrow-path {
-  fill: #347cff;
+  fill: var(--highlighted);
 }
