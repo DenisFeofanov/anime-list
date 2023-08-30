@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ListComponent } from './list/list.component';
 import { ListItemComponent } from './list-item/list-item.component';
 import { PaginationComponent } from './pagination/pagination.component';
+import { FiltersComponent } from './filters/filters.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { PaginationComponent } from './pagination/pagination.component';
     ListComponent,
     ListItemComponent,
     PaginationComponent,
+    FiltersComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, GraphQLModule, HttpClientModule],
   providers: [],

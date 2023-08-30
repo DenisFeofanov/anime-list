@@ -7,9 +7,9 @@
     <ul *ngFor="let anime of animeList">
       <app-list-item [item]="anime"></app-list-item>
     </ul>
+
+    <app-pagination [currentPage]="currentPage"></app-pagination>
   </div>
 
-  <app-pagination [currentPage]="currentPage"></app-pagination>
-
-  <div class="filters"></div>
+  <app-filters class="filters"></app-filters>
 </div>
