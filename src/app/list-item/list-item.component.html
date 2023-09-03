@@ -6,19 +6,11 @@
 
   <div class="properties">
     <div class="first-column">
-      <div class="property">
-        <span>Статус:</span>
-        <span class="highlighted-text"> {{ item.status }}</span>
-      </div>
+      <app-property name="Статус:" [value]="item.status"></app-property>
     </div>
 
     <div class="second-column">
-      <div class="property">
-        <span>Жанры:</span>
-        <span class="highlighted-text" *ngFor="let genre of item.genres">
-          {{ genre }}</span
-        >
-      </div>
+      <app-property name="Жанры:" [value]="item.genres"></app-property>
     </div>
   </div>
 </div>

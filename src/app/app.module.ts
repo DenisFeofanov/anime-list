@@ -9,6 +9,8 @@ import { ListComponent } from './list/list.component';
 import { ListItemComponent } from './list-item/list-item.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { FiltersComponent } from './filters/filters.component';
+import { CardComponent } from './card/card.component';
+import { PropertyComponent } from './property/property.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { FiltersComponent } from './filters/filters.component';
     ListItemComponent,
     PaginationComponent,
     FiltersComponent,
+    CardComponent,
+    PropertyComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, GraphQLModule, HttpClientModule],
   providers: [],

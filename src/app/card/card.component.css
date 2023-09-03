@@ -1,0 +1,67 @@
+.card-page {
+  padding: 3rem 4rem;
+  max-width: 43.7rem;
+}
+
+.back-link {
+  text-decoration: none;
+
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.37rem;
+
+  color: var(--blue);
+  font-family: Roboto-Regular;
+  font-size: 0.875rem;
+  font-style: normal;
+  line-height: normal;
+}
+
+.back-link-arrow {
+  transform: rotate(180deg);
+  width: 0.875rem;
+  height: 0.875rem;
+  margin-right: 0.31rem;
+}
+
+.title {
+  margin: 0 0 3.31rem;
+  color: rgba(0, 0, 0, 0.87);
+  font-family: Roboto-Medium;
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.columns {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+
+.columns div {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.description-heading {
+  margin-bottom: 1.37rem;
+  color: var(--black);
+  font-family: Roboto-Regular;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem; /* 150% */
+}
+
+.description {
+  color: var(--blue);
+  font-family: Roboto-Regular;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2rem; /* 200% */
+}

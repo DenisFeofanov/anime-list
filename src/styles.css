@@ -30,6 +30,4 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
-  color: var(--black);
-  font-family: Roboto-Regular;
 }

@@ -23,12 +23,6 @@
 
 .properties {
   display: flex;
-
-  color: var(--black);
-  font-family: Roboto-Regular;
-  font-size: 1rem;
-  font-style: normal;
-  line-height: 1.5rem; /* 150% */
 }
 
 .property span:first-child {
