@@ -5,4 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './filters.component.html',
   styleUrls: ['./filters.component.css'],
 })
-export class FiltersComponent {}
+export class FiltersComponent {
+  isCheckboxesVisible: boolean = false;
+}

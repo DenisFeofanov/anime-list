@@ -1,10 +1,32 @@
 <h2 class="heading">Фильтры</h2>
 
 <form>
-  <div class="search-container">
-    <input class="search" type="search" placeholder="" />
-    <div class="search-placeholder">Название</div>
+  <div class="text-input-container">
+    <input class="search text-input" type="search" placeholder="" />
+    <div class="text-input-placeholder">Название</div>
   </div>
+
+  <fieldset class="checkboxes-fieldset">
+    <button
+      class="select"
+      type="button"
+      (click)="isCheckboxesVisible = !isCheckboxesVisible"
+    >
+      Выбрано 2
+    </button>
+
+    <div *ngIf="isCheckboxesVisible" class="checkboxes-container">
+      <div class="checkbox-wrapper">
+        <input class="checkbox" type="checkbox" name="genre" id="Action" />
+        <label class="checkbox-label" for="Action">Action</label>
+      </div>
+
+      <div class="checkbox-wrapper">
+        <input class="checkbox" type="checkbox" name="genre" id="Adventure" />
+        <label class="checkbox-label" for="Adventure">Adventure</label>
+      </div>
+    </div>
+  </fieldset>
 
   <fieldset class="radio-fieldset">
     <legend class="radio-heading">Тип</legend>
