@@ -134,3 +134,11 @@
 .checkbox-wrapper + .checkbox-wrapper {
   margin-top: 1rem;
 }
+
+.is-not-visible {
+  display: none;
+}
+
+.is-visible {
+  display: block;
+}

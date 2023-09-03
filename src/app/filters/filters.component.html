@@ -10,12 +10,15 @@
     <button
       class="select"
       type="button"
-      (click)="isCheckboxesVisible = !isCheckboxesVisible"
+      (click)="areCheckboxesVisible = !areCheckboxesVisible"
     >
       Выбрано 2
     </button>
 
-    <div *ngIf="isCheckboxesVisible" class="checkboxes-container">
+    <div
+      class="checkboxes-container is-not-visible"
+      [class.is-visible]="areCheckboxesVisible"
+    >
       <div class="checkbox-wrapper">
         <input class="checkbox" type="checkbox" name="genre" id="Action" />
         <label class="checkbox-label" for="Action">Action</label>
