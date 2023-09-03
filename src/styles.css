@@ -4,6 +4,7 @@
 :root {
   --black: rgba(0, 0, 0, 0.87);
   --highlighted: #347cff;
+  --blue: #2962ff;
 }
 
 @font-face {

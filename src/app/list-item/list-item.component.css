@@ -45,5 +45,5 @@
 }
 
 .highlighted-text {
-  color: #2962ff;
+  color: var(--blue);
 }
