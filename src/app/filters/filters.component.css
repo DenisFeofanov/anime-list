@@ -75,16 +75,16 @@
   margin: 0 0 1.5rem;
 }
 
-.radio-input-container {
+.radio-container {
   display: flex;
   align-items: center;
 }
 
-.radio-input-container + .radio-input-container {
+.radio-container + .radio-container {
   margin-top: 0.75rem;
 }
 
-.radio-input-text {
+.radio-text {
   margin-left: 1.5rem;
 
   color: rgba(0, 0, 0, 0.87);
@@ -94,7 +94,7 @@
   line-height: normal;
 }
 
-.radio-input {
+.radio {
   width: 1.25rem;
   height: 1.25rem;
 }
