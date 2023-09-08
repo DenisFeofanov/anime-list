@@ -1,23 +1,24 @@
 .card-page {
   padding: 3rem 4rem;
-  max-width: 43.7rem;
+  max-width: 51.7rem;
 }
 
 .back-link {
-  text-decoration: none;
+  text-decoration: none; /* reset a styles */
 
   display: flex;
   align-items: center;
-  margin-bottom: 1.37rem;
+  margin-bottom: 1.25rem;
 
   color: var(--blue);
   font-family: Roboto-Regular;
   font-size: 0.875rem;
   font-style: normal;
+  font-weight: 400;
   line-height: normal;
 }
 
-.back-link-arrow {
+.back-link__arrow {
   transform: rotate(180deg);
   width: 0.875rem;
   height: 0.875rem;
@@ -34,17 +35,46 @@
   line-height: normal;
 }
 
-.columns {
+.properties,
+.properties__first-column,
+.properties__second-column {
   display: flex;
-  gap: 1rem;
-  justify-content: space-between;
-  margin-bottom: 2.5rem;
 }
 
-.columns div {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
+.properties {
+  margin-bottom: 2.5rem;
+
+  font-family: Roboto-Regular;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem; /* 150% */
+}
+
+.properties__first-column {
+  flex: 28.31;
+}
+
+.properties__second-column {
+  flex: 15.39;
+}
+
+.properties__names {
+  margin-right: 6.5rem;
+
+  color: var(--black);
+}
+
+.properties__values {
+  color: var(--blue);
+}
+
+.properties p {
+  margin: 0; /* reset p styles */
+}
+
+.properties p + p {
+  margin: 2.5rem 0 0; /* list items margin */
 }
 
 .description-heading {
