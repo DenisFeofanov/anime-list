@@ -1,8 +1,14 @@
 <h2 class="heading">Фильтры</h2>
 
-<form>
+<form (ngSubmit)="onSubmit()">
   <div class="text-input-container">
-    <input class="search text-input" type="search" placeholder="" />
+    <input
+      [(ngModel)]="filters.search"
+      name="search"
+      class="search text-input"
+      type="search"
+      placeholder=""
+    />
     <div class="text-input-placeholder">Название</div>
   </div>
 

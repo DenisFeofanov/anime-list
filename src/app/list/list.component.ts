@@ -1,6 +1,23 @@
 import { Apollo, gql } from 'apollo-angular';
 import { Component, OnInit } from '@angular/core';
 import { Anime } from 'src/shared/anime.model';
+import { Filters } from 'src/shared/filters.model';
+
+const GET_POPULAR_ANIME = gql`
+  query PopularAnime($search: String) {
+    Page(page: 1, perPage: 5) {
+      media(type: ANIME, sort: POPULARITY_DESC, search: $search) {
+        title {
+          romaji
+          native
+        }
+        genres
+        status
+        id
+      }
+    }
+  }
+`;
 
 @Component({
   selector: 'app-list',
@@ -15,22 +32,16 @@ export class ListComponent implements OnInit {
   constructor(private apollo: Apollo) {}
 
   ngOnInit() {
+    this.getList();
+  }
+
+  getList(filters?: Filters) {
     this.apollo
       .query({
-        query: gql`
-          query PopularAnime {
-            Page(page: 1, perPage: 5) {
-              media(type: ANIME, sort: POPULARITY_DESC) {
-                title {
-                  romaji
-                  native
-                }
-                genres
-                status
-              }
-            }
-          }
-        `,
+        query: GET_POPULAR_ANIME,
+        variables: {
+          search: filters && filters.search,
+        },
       })
       .subscribe((result: any) => {
         this.animeList = result.data.Page.media;

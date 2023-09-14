@@ -11,6 +11,7 @@ import { PaginationComponent } from './pagination/pagination.component';
 import { FiltersComponent } from './filters/filters.component';
 import { CardComponent } from './card/card.component';
 import { PropertyComponent } from './property/property.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,13 @@ import { PropertyComponent } from './property/property.component';
     CardComponent,
     PropertyComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, GraphQLModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    GraphQLModule,
+    HttpClientModule,
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -11,5 +11,5 @@
     <app-pagination [currentPage]="currentPage"></app-pagination>
   </div>
 
-  <app-filters class="filters"></app-filters>
+  <app-filters class="filters" (submitted)="getList($event)"></app-filters>
 </div>
