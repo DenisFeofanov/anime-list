@@ -118,12 +118,13 @@
 }
 
 .checkbox {
-  margin-right: 0.81rem;
   width: 1.125rem;
   height: 1.125rem;
 }
 
 .checkbox-label {
+  padding-left: 0.81rem;
+
   color: #000;
   font-family: Roboto-Regular;
   font-size: 1rem;
