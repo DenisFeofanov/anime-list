@@ -10,9 +10,9 @@ export class FiltersComponent {
   filters: Filters = {
     search: '',
     genre: '',
-    type: '',
+    type: 'finished',
   };
-
+  genreDummyData: string[] = ['Action', 'Adventure', 'Horror', 'Mystery'];
   @Output() submitted = new EventEmitter<Filters>();
   areCheckboxesVisible: boolean = false;
 
