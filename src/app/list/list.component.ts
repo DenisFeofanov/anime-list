@@ -4,9 +4,15 @@ import { Anime } from 'src/shared/anime.model';
 import { Filters } from 'src/shared/filters.model';
 
 const GET_POPULAR_ANIME = gql`
-  query PopularAnime($search: String) {
+  query PopularAnime($search: String, $genre: [String], $status: MediaStatus) {
     Page(page: 1, perPage: 5) {
-      media(type: ANIME, sort: POPULARITY_DESC, search: $search) {
+      media(
+        type: ANIME
+        sort: POPULARITY_DESC
+        search: $search
+        genre_in: $genre
+        status: $status
+      ) {
         title {
           romaji
           native
@@ -36,13 +42,19 @@ export class ListComponent implements OnInit {
   }
 
   getList(filters?: Filters) {
-    let searchValue = (filters && filters.search) || undefined;
+    // check that filters' values are non-empty, otherwise assign undefined
+    let searchValue = (filters && filters.search) || undefined,
+      genreValue =
+        (filters && filters.genre.length && filters.genre) || undefined,
+      statusValue = (filters && filters.status) || undefined;
 
     this.apollo
       .query({
         query: GET_POPULAR_ANIME,
         variables: {
           search: searchValue,
+          genre: genreValue,
+          status: statusValue,
         },
       })
       .subscribe((result: any) => {

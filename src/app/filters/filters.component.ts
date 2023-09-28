@@ -10,7 +10,7 @@ import { STATUS_VALUES } from 'src/shared/filters.model';
 export class FiltersComponent {
   filters: Filters = {
     search: '',
-    genre: '',
+    genre: [],
     status: 'RELEASING',
   };
   genreValues = GENRE_VALUES;

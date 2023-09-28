@@ -6,10 +6,12 @@ export const STATUS_VALUES = [
   'NOT_YET_RELEASED',
   'CANCELLED',
   'HIATUS',
-];
+] as const;
+
+export type Status = (typeof STATUS_VALUES)[number];
 
 export interface Filters {
   search: string;
-  genre: string;
-  status: string;
+  genre: string[];
+  status: Status;
 }
