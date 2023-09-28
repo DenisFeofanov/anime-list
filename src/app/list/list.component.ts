@@ -36,11 +36,13 @@ export class ListComponent implements OnInit {
   }
 
   getList(filters?: Filters) {
+    let searchValue = (filters && filters.search) || undefined;
+
     this.apollo
       .query({
         query: GET_POPULAR_ANIME,
         variables: {
-          search: filters && filters.search,
+          search: searchValue,
         },
       })
       .subscribe((result: any) => {
