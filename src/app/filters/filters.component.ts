@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { Filters } from 'src/shared/filters.model';
+import { Filters, GENRE_VALUES } from 'src/shared/filters.model';
+import { STATUS_VALUES } from 'src/shared/filters.model';
 
 @Component({
   selector: 'app-filters',
@@ -10,9 +11,10 @@ export class FiltersComponent {
   filters: Filters = {
     search: '',
     genre: '',
-    type: 'finished',
+    status: 'RELEASING',
   };
-  genreDummyData: string[] = ['Action', 'Adventure', 'Horror', 'Mystery'];
+  genreValues = GENRE_VALUES;
+  statusValues = STATUS_VALUES;
   @Output() submitted = new EventEmitter<Filters>();
   areCheckboxesVisible: boolean = false;
 

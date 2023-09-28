@@ -25,7 +25,7 @@
       class="checkboxes-container is-not-visible"
       [class.is-visible]="areCheckboxesVisible"
     >
-      <div class="checkbox-wrapper" *ngFor="let genre of genreDummyData">
+      <div class="checkbox-wrapper" *ngFor="let genre of genreValues">
         <input
           class="checkbox"
           type="checkbox"
@@ -39,30 +39,18 @@
   </fieldset>
 
   <fieldset class="radio-fieldset">
-    <legend class="radio-heading">Тип</legend>
+    <legend class="radio-heading">Статус</legend>
 
-    <div class="radio-container">
+    <div class="radio-container" *ngFor="let status of statusValues">
       <input
         class="radio"
         type="radio"
-        id="finished"
-        name="type"
-        value="finished"
-        [(ngModel)]="filters.type"
+        [id]="status"
+        name="status"
+        [value]="status"
+        [(ngModel)]="filters.status"
       />
-      <label class="radio-text" for="finished">Finished</label>
-    </div>
-
-    <div class="radio-container">
-      <input
-        class="radio"
-        type="radio"
-        id="unfinished"
-        name="type"
-        value="unfinished"
-        [(ngModel)]="filters.type"
-      />
-      <label class="radio-text" for="unfinished">Unfinished</label>
+      <label class="radio-text" [for]="status">{{ status }}</label>
     </div>
   </fieldset>
 </form>
