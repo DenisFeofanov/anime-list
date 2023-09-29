@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Anime } from 'src/shared/anime.model';
+import { Anime } from 'src/shared/list.model';
 
 @Component({
   selector: 'app-list-item',

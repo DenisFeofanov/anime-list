@@ -1,7 +1,6 @@
 import { Apollo, gql } from 'apollo-angular';
 import { Component, OnInit } from '@angular/core';
-import { Anime } from 'src/shared/anime.model';
-import { RequestArgs } from 'src/shared/list.model';
+import { RequestArgs, Anime } from 'src/shared/list.model';
 
 const GET_POPULAR_ANIME = gql`
   query PopularAnime($search: String, $genre: [String], $status: MediaStatus) {
@@ -32,7 +31,7 @@ const GET_POPULAR_ANIME = gql`
 })
 export class ListComponent {
   error: any;
-  animeList!: Anime[];
+  animeList: Anime[] = [];
   currentPage = 3;
 
   constructor(private apollo: Apollo) {}

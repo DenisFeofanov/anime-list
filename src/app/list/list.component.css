@@ -9,6 +9,10 @@
   background: #fafafa;
 }
 
+.list-item {
+  list-style-type: none;
+}
+
 .heading {
   color: var(--black);
   font-family: Roboto-Medium;
@@ -21,6 +25,16 @@
 ul {
   margin: 0;
   padding: 0;
+}
+
+.error {
+  color: var(--black);
+  font-family: Roboto-Regular;
+  font-size: 1.5rem;
+  font-style: normal;
+  line-height: 2rem; /* 114.286% */
+  font-weight: 500;
+  margin: 2rem 0;
 }
 
 .filters {
