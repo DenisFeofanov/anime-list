@@ -14,7 +14,7 @@ const GET_POPULAR_ANIME = gql`
         status: $status
       ) {
         title {
-          romaji
+          english
           native
         }
         genres

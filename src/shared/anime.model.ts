@@ -5,6 +5,6 @@ export interface Anime {
 }
 
 export interface Title {
-  romaji: string;
+  english: string;
   native: string;
 }
