@@ -39,4 +39,8 @@ export class FiltersComponent implements OnInit {
       status: this.filters.status || undefined,
     });
   }
+
+  onChange(): void {
+    this.sendRequest();
+  }
 }

@@ -8,6 +8,7 @@
       class="search text-input"
       type="search"
       placeholder=""
+      (input)="onChange()"
     />
     <div class="text-input-placeholder">Название</div>
   </div>
@@ -33,6 +34,7 @@
           [id]="genre.name"
           [value]="genre.name"
           [(ngModel)]="genre.isChecked"
+          (change)="onChange()"
         />
         <label class="checkbox-label" [for]="genre.name">{{
           genre.name
@@ -52,10 +54,9 @@
         name="status"
         [value]="status"
         [(ngModel)]="filters.status"
+        (change)="onChange()"
       />
       <label class="radio-text" [for]="status">{{ status }}</label>
     </div>
   </fieldset>
-
-  <button type="submit">Submit</button>
 </form>
