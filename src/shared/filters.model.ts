@@ -10,8 +10,13 @@ export const STATUS_VALUES = [
 
 export type Status = (typeof STATUS_VALUES)[number];
 
+interface Checkbox {
+  name: string;
+  isChecked: boolean;
+}
+
 export interface Filters {
   search: string;
-  genre: string[];
+  genre: Checkbox[];
   status: Status;
 }

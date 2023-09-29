@@ -1,7 +1,7 @@
 import { Apollo, gql } from 'apollo-angular';
 import { Component, OnInit } from '@angular/core';
 import { Anime } from 'src/shared/anime.model';
-import { Filters } from 'src/shared/filters.model';
+import { RequestArgs } from 'src/shared/list.model';
 
 const GET_POPULAR_ANIME = gql`
   query PopularAnime($search: String, $genre: [String], $status: MediaStatus) {
@@ -41,21 +41,11 @@ export class ListComponent implements OnInit {
     this.getList();
   }
 
-  getList(filters?: Filters) {
-    // check that filters' values are non-empty, otherwise assign undefined
-    let searchValue = (filters && filters.search) || undefined,
-      genreValue =
-        (filters && filters.genre.length && filters.genre) || undefined,
-      statusValue = (filters && filters.status) || undefined;
-
+  getList(variables?: RequestArgs) {
     this.apollo
       .query({
         query: GET_POPULAR_ANIME,
-        variables: {
-          search: searchValue,
-          genre: genreValue,
-          status: statusValue,
-        },
+        variables,
       })
       .subscribe((result: any) => {
         this.animeList = result.data.Page.media;

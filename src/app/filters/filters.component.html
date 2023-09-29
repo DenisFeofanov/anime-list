@@ -25,15 +25,18 @@
       class="checkboxes-container is-not-visible"
       [class.is-visible]="areCheckboxesVisible"
     >
-      <div class="checkbox-wrapper" *ngFor="let genre of genreValues">
+      <div class="checkbox-wrapper" *ngFor="let genre of filters.genre">
         <input
           class="checkbox"
           type="checkbox"
           name="genre"
-          [id]="genre"
-          [value]="genre"
+          [id]="genre.name"
+          [value]="genre.name"
+          [(ngModel)]="genre.isChecked"
         />
-        <label class="checkbox-label" [for]="genre">{{ genre }}</label>
+        <label class="checkbox-label" [for]="genre.name">{{
+          genre.name
+        }}</label>
       </div>
     </div>
   </fieldset>
