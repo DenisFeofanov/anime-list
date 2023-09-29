@@ -30,16 +30,12 @@ const GET_POPULAR_ANIME = gql`
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css'],
 })
-export class ListComponent implements OnInit {
+export class ListComponent {
   error: any;
   animeList!: Anime[];
   currentPage = 3;
 
   constructor(private apollo: Apollo) {}
-
-  ngOnInit() {
-    this.getList();
-  }
 
   getList(variables?: RequestArgs) {
     this.apollo
