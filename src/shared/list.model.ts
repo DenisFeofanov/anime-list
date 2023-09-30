@@ -10,6 +10,8 @@ export interface Anime {
   title: Title;
   genres: string[];
   status: string;
+  id: number;
+  description: string;
 }
 
 export interface Title {

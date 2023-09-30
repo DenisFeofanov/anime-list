@@ -1,5 +1,5 @@
 import { Apollo, gql } from 'apollo-angular';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { RequestArgs, Anime } from 'src/shared/list.model';
 
 const GET_POPULAR_ANIME = gql`
@@ -18,6 +18,7 @@ const GET_POPULAR_ANIME = gql`
         }
         genres
         status
+        description
         id
       }
     }

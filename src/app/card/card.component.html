@@ -1,42 +1,31 @@
-<div class="card-page">
-  <a routerLink="/" class="back-link">
+<div class="card-page" *ngIf="item">
+  <a routerLink="/cards" class="back-link">
     <img class="back-link__arrow" src="../../assets/icons/arrow-item.svg" />
     <span>Вернуться</span>
   </a>
 
-  <h1 class="title">Of Course I Still Love You</h1>
+  <h1 class="title">{{ item.title.english || item.title.native }}</h1>
 
   <div class="properties">
     <div class="properties__first-column">
       <div class="properties__names">
-        <p>Тип</p>
-        <p>Вес</p>
+        <p>Жанры</p>
       </div>
       <div class="properties__values">
-        <p>Barge</p>
-        <p>440892 кг</p>
+        <p>{{ item.genres.join(", ") }}</p>
       </div>
     </div>
 
     <div class="properties__second-column">
       <div class="properties__names">
-        <p>Порт</p>
-        <p>Год</p>
+        <p>Статус</p>
       </div>
       <div class="properties__values">
-        <p>Port Canaveral</p>
-        <p>2015</p>
+        <p>{{ item.status }}</p>
       </div>
     </div>
   </div>
 
   <span class="description-heading">Миссии</span>
-  <p class="description">
-    SES-9, CRS-8, Thaicom 8, ABS-2A / Eutelsat 117W B, JCSAT-16, SES-10,
-    BulgariaSat-1, SES-11 / Echostar 105, KoreaSat 5A, Falcon Heavy Test Flight,
-    TESS, Bangabandhu-1, Telstar 19V, Merah Putih, Telstar 18V, Es’hail 2,
-    Nusantara Satu (PSN-6) / S5 / Beresheet, CCtCap Demo Mission 1, ArabSat 6A,
-    CRS-17, Starlink v0.9, STP-2, Starlink 1, JCSat 18 / Kacific 1, Starlink 2,
-    Starlink 3, Starlink 4, Starlink 5
-  </p>
+  <p class="description" [innerHTML]="item.description"></p>
 </div>

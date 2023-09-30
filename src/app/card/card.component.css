@@ -42,6 +42,7 @@
 }
 
 .properties {
+  gap: 1rem;
   margin-bottom: 2.5rem;
 
   font-family: Roboto-Regular;
@@ -66,6 +67,7 @@
 }
 
 .properties__values {
+  word-break: break-word;
   color: var(--blue);
 }
 

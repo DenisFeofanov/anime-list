@@ -4,8 +4,9 @@ import { ListComponent } from './list/list.component';
 import { CardComponent } from './card/card.component';
 
 const routes: Routes = [
-  { path: 'card', component: CardComponent },
-  { path: '', component: ListComponent },
+  { path: 'cards/:id', title: 'Card', component: CardComponent },
+  { path: 'cards', title: 'Anime List', component: ListComponent },
+  { path: '', redirectTo: '/cards', pathMatch: 'full' },
 ];
 
 @NgModule({
