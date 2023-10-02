@@ -9,7 +9,7 @@
     <ng-template #loadedResult>
       <ul *ngIf="animeList.length > 0; else emptyResult">
         <li class="list-item" *ngFor="let anime of animeList">
-          <app-list-item [item]="anime"></app-list-item>
+          <app-card [item]="anime"></app-card>
         </li>
       </ul>
 

@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { GraphQLModule } from './graphql.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ListComponent } from './list/list.component';
-import { ListItemComponent } from './list-item/list-item.component';
+import { CardComponent } from './card/card.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { FiltersComponent } from './filters/filters.component';
 import { DetailsComponent } from './details/details.component';
@@ -19,7 +19,7 @@ import { CacheRouteReuseStrategy } from './cache-route-reuse.strategy';
   declarations: [
     AppComponent,
     ListComponent,
-    ListItemComponent,
+    CardComponent,
     PaginationComponent,
     FiltersComponent,
     DetailsComponent,
