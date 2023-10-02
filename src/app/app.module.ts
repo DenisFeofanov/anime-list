@@ -9,7 +9,7 @@ import { ListComponent } from './list/list.component';
 import { ListItemComponent } from './list-item/list-item.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { FiltersComponent } from './filters/filters.component';
-import { CardComponent } from './card/card.component';
+import { DetailsComponent } from './details/details.component';
 import { PropertyComponent } from './property/property.component';
 import { FormsModule } from '@angular/forms';
 import { RouteReuseStrategy } from '@angular/router';
@@ -22,7 +22,7 @@ import { CacheRouteReuseStrategy } from './cache-route-reuse.strategy';
     ListItemComponent,
     PaginationComponent,
     FiltersComponent,
-    CardComponent,
+    DetailsComponent,
     PropertyComponent,
   ],
   imports: [

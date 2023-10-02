@@ -19,11 +19,11 @@ const GET_ANIME_BY_ID = gql`
 `;
 
 @Component({
-  selector: 'app-card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css'],
+  selector: 'app-details',
+  templateUrl: './details.component.html',
+  styleUrls: ['./details.component.css'],
 })
-export class CardComponent implements OnInit {
+export class DetailsComponent implements OnInit {
   item!: Anime;
 
   constructor(private router: Router, private apollo: Apollo) {}
