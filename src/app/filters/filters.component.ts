@@ -15,6 +15,7 @@ export class FiltersComponent {
   areCheckboxesVisible: boolean = false;
 
   onChange(): void {
-    this.submitted.emit();
+    const filtersHasChanged = true;
+    this.submitted.emit(filtersHasChanged);
   }
 }

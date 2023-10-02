@@ -58,7 +58,9 @@ export class ListComponent implements OnInit {
     this.getList();
   }
 
-  getList(): void {
+  getList(areFiltersChanged?: Boolean): void {
+    if (areFiltersChanged) this.currentPage = 1;
+
     // convert to request format, assign undefined if values are empty
     let selectedGenres = this.filters.genre
       .filter((genre) => genre.isChecked)
