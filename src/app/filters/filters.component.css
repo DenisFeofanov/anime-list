@@ -43,7 +43,7 @@
   line-height: normal;
 }
 
-.text-input:not(.text-input:placeholder-shown) + .text-input-placeholder {
+.text-input:valid + .text-input-placeholder {
   top: 0;
   font-size: 0.875rem;
 }
