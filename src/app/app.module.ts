@@ -12,6 +12,8 @@ import { FiltersComponent } from './filters/filters.component';
 import { CardComponent } from './card/card.component';
 import { PropertyComponent } from './property/property.component';
 import { FormsModule } from '@angular/forms';
+import { RouteReuseStrategy } from '@angular/router';
+import { CacheRouteReuseStrategy } from './cache-route-reuse.strategy';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,12 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: RouteReuseStrategy,
+      useClass: CacheRouteReuseStrategy,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
