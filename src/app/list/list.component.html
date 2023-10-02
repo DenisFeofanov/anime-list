@@ -14,7 +14,10 @@
       ><p class="error">Oops, could not find anything!</p>
     </ng-template>
 
-    <app-pagination [currentPage]="currentPage"></app-pagination>
+    <app-pagination
+      [currentPage]="currentPage"
+      (changePageClicked)="changePage($event)"
+    ></app-pagination>
   </div>
 
   <app-filters

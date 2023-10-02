@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-pagination',
@@ -7,4 +7,9 @@ import { Component, Input } from '@angular/core';
 })
 export class PaginationComponent {
   @Input() currentPage!: number;
+  @Output() changePageClicked = new EventEmitter();
+
+  onClick(pageAmount: number): void {
+    this.changePageClicked.emit(pageAmount);
+  }
 }

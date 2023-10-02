@@ -17,6 +17,11 @@
   cursor: pointer;
 }
 
-.arrow:hover .arrow-path {
+.pageButton:hover .arrow-path {
   fill: var(--highlighted);
+}
+
+.pageButton {
+  all: initial;
+  height: 24px;
 }

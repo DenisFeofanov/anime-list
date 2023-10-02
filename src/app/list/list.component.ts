@@ -4,8 +4,16 @@ import { Anime } from 'src/shared/list.model';
 import { Filters, GENRE_VALUES } from 'src/shared/filters.model';
 
 const GET_POPULAR_ANIME = gql`
-  query PopularAnime($search: String, $genre: [String], $status: MediaStatus) {
-    Page(page: 1, perPage: 5) {
+  query PopularAnime(
+    $search: String
+    $genre: [String]
+    $status: MediaStatus
+    $page: Int
+  ) {
+    Page(page: $page, perPage: 5) {
+      pageInfo {
+        hasNextPage
+      }
       media(
         type: ANIME
         sort: POPULARITY_DESC
@@ -34,7 +42,8 @@ const GET_POPULAR_ANIME = gql`
 export class ListComponent implements OnInit {
   error: any;
   animeList: Anime[] = [];
-  currentPage = 3;
+  currentPage = 1;
+  hasNextPage!: Boolean;
   filters: Filters = {
     search: '',
     genre: GENRE_VALUES.map((name) => {
@@ -62,11 +71,21 @@ export class ListComponent implements OnInit {
           search: this.filters.search || undefined,
           genre: (selectedGenres.length && selectedGenres) || undefined,
           status: this.filters.status || undefined,
+          page: this.currentPage,
         },
       })
       .subscribe((result: any) => {
         this.animeList = result.data.Page.media;
         this.error = result.error;
+        this.hasNextPage = result.data.Page.pageInfo.hasNextPage;
       });
+  }
+
+  changePage(pageAmount: number): void {
+    const newPage = this.currentPage + pageAmount;
+    if (newPage < 1 || (pageAmount === 1 && !this.hasNextPage)) return;
+
+    this.currentPage = newPage;
+    this.getList();
   }
 }
