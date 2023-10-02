@@ -51,6 +51,7 @@ export class ListComponent implements OnInit {
     }),
     status: 'FINISHED',
   };
+  isLoading: boolean = false;
 
   constructor(private apollo: Apollo) {}
 
@@ -66,6 +67,7 @@ export class ListComponent implements OnInit {
       .filter((genre) => genre.isChecked)
       .map((genre) => genre.name);
 
+    this.isLoading = true;
     this.apollo
       .query({
         query: GET_POPULAR_ANIME,
@@ -77,6 +79,7 @@ export class ListComponent implements OnInit {
         },
       })
       .subscribe((result: any) => {
+        this.isLoading = false;
         this.animeList = result.data.Page.media;
         this.error = result.error;
         this.hasNextPage = result.data.Page.pageInfo.hasNextPage;

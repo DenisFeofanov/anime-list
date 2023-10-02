@@ -4,20 +4,24 @@
 
     <h1 class="heading">Popular anime</h1>
 
-    <ul *ngIf="animeList.length > 0; else elseBlock">
-      <li class="list-item" *ngFor="let anime of animeList">
-        <app-list-item [item]="anime"></app-list-item>
-      </li>
-    </ul>
+    <p *ngIf="isLoading; else loadedResult" class="loading">Loading...</p>
 
-    <ng-template #elseBlock
-      ><p class="error">Oops, could not find anything!</p>
+    <ng-template #loadedResult>
+      <ul *ngIf="animeList.length > 0; else emptyResult">
+        <li class="list-item" *ngFor="let anime of animeList">
+          <app-list-item [item]="anime"></app-list-item>
+        </li>
+      </ul>
+
+      <ng-template #emptyResult
+        ><p class="error">Oops, could not find anything!</p>
+      </ng-template>
+
+      <app-pagination
+        [currentPage]="currentPage"
+        (changePageClicked)="changePage($event)"
+      ></app-pagination>
     </ng-template>
-
-    <app-pagination
-      [currentPage]="currentPage"
-      (changePageClicked)="changePage($event)"
-    ></app-pagination>
   </div>
 
   <app-filters

@@ -27,7 +27,8 @@ ul {
   padding: 0;
 }
 
-.error {
+.error,
+.loading {
   color: var(--black);
   font-family: Roboto-Regular;
   font-size: 1.5rem;
